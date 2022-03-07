@@ -1,0 +1,27 @@
+{
+  "name": "TRUNG TÙNG NHẬT",
+  "ID": "1030077285",
+  "pet": [
+    {
+      "name": "Rockruff",
+      "type": "Rock",
+      "HP": "18.0",
+      "Attack": "26.0",
+      "Defense": "16.0",
+      "Speed": "24.0",
+      "skill": [
+        "Keen Eye",
+        "Vital Spirit",
+        "Steadfast"
+      ],
+      "coins": 0,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/744.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 0,
+    "lose": 0,
+    "draw": 1
+  }
+}

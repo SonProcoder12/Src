@@ -1,0 +1,53 @@
+{
+  "name": "Lê Minh Phương",
+  "ID": "100072834392720",
+  "pet": [
+    {
+      "name": "Oshawott",
+      "type": "Water",
+      "HP": "NaNNaN",
+      "Attack": 0,
+      "Defense": 0,
+      "Speed": 0,
+      "skill": [
+        "Torrent",
+        "Shell Armor"
+      ],
+      "coins": 0,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/501.png"
+    },
+    {
+      "name": "Solgaleo",
+      "type": "Psychic",
+      "HP": "137.0",
+      "Attack": "137.0",
+      "Defense": "107.0",
+      "Speed": "97.0",
+      "skill": [
+        "Full Metal Body"
+      ],
+      "coins": 10000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/791.png"
+    },
+    {
+      "name": "Fletchinder",
+      "type": "Fire",
+      "HP": "93.0",
+      "Attack": "109.5",
+      "Defense": "82.5",
+      "Speed": "126.0",
+      "skill": [
+        "Flame Body",
+        "Gale Wings"
+      ],
+      "coins": 20000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/662.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 2,
+    "lose": 1,
+    "draw": 0
+  }
+}

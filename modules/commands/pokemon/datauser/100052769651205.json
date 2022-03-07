@@ -1,0 +1,39 @@
+{
+  "name": "Người dùng Facebook",
+  "ID": "100052769651205",
+  "pet": [
+    {
+      "name": "Combusken",
+      "type": "Fire",
+      "HP": "24.0",
+      "Attack": "34.0",
+      "Defense": "24.0",
+      "Speed": "22.0",
+      "skill": [
+        "Blaze",
+        "Speed Boost"
+      ],
+      "coins": 0,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/256.png"
+    },
+    {
+      "name": "Solgaleo",
+      "type": "Psychic",
+      "HP": 137,
+      "Attack": 137,
+      "Defense": 107,
+      "Speed": 97,
+      "coins": 47800,
+      "skill": [
+        "Full Metal Body"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/791.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 0,
+    "lose": 0,
+    "draw": 4
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "name": "Thanh Vinh",
+  "ID": "100015848290857",
+  "pet": [
+    {
+      "name": "Rayquaza",
+      "type": "Dragon",
+      "HP": "195.5",
+      "Attack": "279.3",
+      "Defense": "167.6",
+      "Speed": "176.9",
+      "coins": "60192.0",
+      "skill": [
+        "Air Lock"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/384.png"
+    },
+    {
+      "name": "Kartana",
+      "type": "Grass",
+      "HP": 59,
+      "Attack": 181,
+      "Defense": 131,
+      "Speed": 109,
+      "coins": 48000,
+      "skill": [
+        "Beast Boost"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/798.png"
+    },
+    {
+      "name": "Groudon",
+      "type": "Ground",
+      "HP": 100,
+      "Attack": 150,
+      "Defense": 140,
+      "Speed": 90,
+      "coins": 48000,
+      "skill": [
+        "Drought"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/383.png"
+    },
+    {
+      "name": "Mew",
+      "type": "Psychic",
+      "HP": 100,
+      "Attack": 100,
+      "Defense": 100,
+      "Speed": 100,
+      "coins": 40000,
+      "skill": [
+        "Synchronize"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/151.png"
+    },
+    {
+      "name": "Kyogre",
+      "type": "Water",
+      "HP": "140.0",
+      "Attack": "140.0",
+      "Defense": "126.0",
+      "Speed": "126.0",
+      "coins": "45600.0",
+      "skill": [
+        "Drizzle"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/382.png"
+    },
+    {
+      "name": "Arceus",
+      "type": "Normal",
+      "HP": 120,
+      "Attack": 120,
+      "Defense": 120,
+      "Speed": 120,
+      "coins": 48000,
+      "skill": [
+        "Multitype"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/493.png"
+    },
+    {
+      "name": "Solgaleo",
+      "type": "Psychic",
+      "HP": 137,
+      "Attack": 137,
+      "Defense": 107,
+      "Speed": 97,
+      "coins": 47800,
+      "skill": [
+        "Full Metal Body"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/791.png"
+    },
+    {
+      "name": "Yveltal",
+      "type": "Dark",
+      "HP": 126,
+      "Attack": 131,
+      "Defense": 95,
+      "Speed": 99,
+      "coins": 45100,
+      "skill": [
+        "Dark Aura"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/717.png"
+    },
+    {
+      "name": "Zekrom",
+      "type": "Dragon",
+      "HP": 100,
+      "Attack": 150,
+      "Defense": 120,
+      "Speed": 90,
+      "coins": 46000,
+      "skill": [
+        "Teravolt"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/644.png"
+    },
+    {
+      "name": "Spritzee",
+      "type": "Fairy",
+      "HP": "117.0",
+      "Attack": "78.0",
+      "Defense": "90.0",
+      "Speed": "34.5",
+      "skill": [
+        "Healer",
+        "Aroma Veil"
+      ],
+      "coins": 20000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/682.png"
+    },
+    {
+      "name": "Dwebble",
+      "type": "Bug",
+      "HP": "50.0",
+      "Attack": "65.0",
+      "Defense": "85.0",
+      "Speed": "55.0",
+      "skill": [
+        "Sturdy",
+        "Shell Armor",
+        "Weak Armor"
+      ],
+      "coins": 10000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/557.png"
+    },
+    {
+      "name": "Gloom",
+      "type": "Grass",
+      "HP": "24.0",
+      "Attack": "26.0",
+      "Defense": "28.0",
+      "Speed": "16.0",
+      "skill": [
+        "Chlorophyll",
+        "Stench"
+      ],
+      "coins": 0,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/044.png"
+    },
+    {
+      "name": "Carnivine",
+      "type": "Grass",
+      "HP": "111.0",
+      "Attack": "150.0",
+      "Defense": "108.0",
+      "Speed": "69.0",
+      "skill": [
+        "Levitate"
+      ],
+      "coins": 20000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/455.png"
+    },
+    {
+      "name": "Flaaffy",
+      "type": "Electric",
+      "HP": "28.0",
+      "Attack": "22.0",
+      "Defense": "22.0",
+      "Speed": "18.0",
+      "skill": [
+        "Static",
+        "Plus"
+      ],
+      "coins": 0,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/180.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 0,
+    "lose": 1,
+    "draw": 0
+  }
+}

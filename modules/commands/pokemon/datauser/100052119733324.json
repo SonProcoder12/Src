@@ -1,0 +1,98 @@
+{
+  "name": "Huỳnh Duy",
+  "ID": "100052119733324",
+  "pet": [
+    {
+      "name": "Pidgeot",
+      "type": "Normal",
+      "HP": "118.3",
+      "Attack": 114,
+      "Defense": 106.875,
+      "Speed": 143.925,
+      "skill": [
+        "Keen Eye",
+        "Tangled Feet",
+        "Big Pecks"
+      ],
+      "coins": 19000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/018.png"
+    },
+    {
+      "name": "Slurpuff",
+      "type": "Fairy",
+      "HP": "82.0",
+      "Attack": "80.0",
+      "Defense": "86.0",
+      "Speed": "72.0",
+      "skill": [
+        "Sweet Veil",
+        "Unburden"
+      ],
+      "coins": 10000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/685.png"
+    },
+    {
+      "name": "Turtonator",
+      "type": "Fire",
+      "HP": "24.01.2",
+      "Attack": "31.21.56",
+      "Defense": "54.02.7",
+      "Speed": "14.40.72",
+      "skill": [
+        "Shell Armor"
+      ],
+      "coins": 0,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/776.png"
+    },
+    {
+      "name": "Gible",
+      "type": "Dragon",
+      "HP": "29.0",
+      "Attack": "35.0",
+      "Defense": "22.5",
+      "Speed": "21.0",
+      "skill": [
+        "Sand Veil",
+        "Rough Skin"
+      ],
+      "coins": 5000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/443.png"
+    },
+    {
+      "name": "Jynx",
+      "type": "Ice",
+      "HP": "97.5",
+      "Attack": "75.0",
+      "Defense": "52.5",
+      "Speed": "142.5",
+      "skill": [
+        "Oblivious",
+        "Forewarn",
+        "Dry Skin"
+      ],
+      "coins": 20000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/124.png"
+    },
+    {
+      "name": "Shellder",
+      "type": "Water",
+      "HP": "30.0",
+      "Attack": "65.0",
+      "Defense": "100.0",
+      "Speed": "40.0",
+      "skill": [
+        "Shell Armor",
+        "Skill Link",
+        "Overcoat"
+      ],
+      "coins": 10000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/090.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 1,
+    "lose": 1,
+    "draw": 1
+  }
+}

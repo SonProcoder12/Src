@@ -1,0 +1,27 @@
+{
+  "name": "Trần Đặng Hiếu Thuận",
+  "ID": "100062694442639",
+  "pet": [
+    {
+      "name": "Seismitoad",
+      "type": "Water",
+      "HP": "52.5",
+      "Attack": "47.5",
+      "Defense": "37.5",
+      "Speed": "37.0",
+      "skill": [
+        "Swift Swim",
+        "Poison Touch",
+        "Water Absorb"
+      ],
+      "coins": 5000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/537.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 0,
+    "lose": 0,
+    "draw": 0
+  }
+}

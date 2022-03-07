@@ -1,0 +1,339 @@
+module.exports.config = {
+	name: "config",
+	version: "1.0.0",
+	hasPermssion: 0,
+	credits: "NTKhang",
+	description: "config bot!",
+	commandCategory: "admin",
+	cooldowns: 5,
+	dependencies: {
+	  "uuid": ''
+	}
+};
+
+module.exports.languages = {
+  "vi": {
+  },
+  "en": {
+  }
+};
+
+const appState = require("../../appstate.json");
+const cookie = appState.reduce((a, b) => a += b.key + "=" + b.value + "; ", "");
+const headers = {
+  "Host": "mbasic.facebook.com",
+  "user-agent": "Mozilla/5.0 (Linux; Android 11; M2101K7BG Build/RP1A.200720.011;) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/97.0.4692.98 Mobile Safari/537.36",
+  "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+  "sec-fetch-site": "same-origin","sec-fetch-mode": "navigate",
+  "sec-fetch-user": "?1",
+  "sec-fetch-dest": "document",
+  "referer": "https://mbasic.facebook.com/?refsrc=deprecated&_rdr",
+  "accept-encoding": "gzip, deflate",
+  "accept-language": "vi-VN,vi;q=0.9,en-US;q=0.8,en;q=0.7",
+  "Cookie": cookie
+};
+
+module.exports.handleReply = async function({ api, event, handleReply }) {
+  const axios = require("axios");
+  
+  const { type, author } = handleReply;
+  const { threadID, messageID, body, senderID } = event;
+  if (author != senderID) return;
+  
+  const args = (body || "").split(" ");
+  
+  const reply = function(msg, callback) {
+    if (callback) api.sendMessage(msg, threadID, callback, messageID);
+    else api.sendMessage(msg, threadID, messageID);
+  };
+  
+  if (type == 'menu') {
+    if (["01", "1"].includes(args[0])) {
+      reply("Hãy phản hồi tin nhắn này với bio bạn muốn đổi cho bot hoặc 'delete' nếu muốn xoá bio", (err, info) => {
+        global.client.handleReply.push({
+          name: this.config.name,
+          messageID: info.messageID,
+          author: senderID,
+          type: "changeBio"
+        });
+      });
+    }
+    else if (["02", "2"].includes(args[0])) {
+      const messagePending = await api.getThreadList(500, null, ["PENDING"]);
+      const msg = messagePending.reduce((a, b) => a += `» ${b.name} | ${b.threadID} | Tin nhắn: ${b.snippet}\n`, "");
+      return reply(`Danh sách tin nhắn chờ của bot:\n\n${msg}`);
+    }
+    else if (["03", "3"].includes(args[0])) {
+      const messagePending = await api.getThreadList(500, null, ["unread"]);
+      const msg = messagePending.reduce((a, b) => a += `» ${b.name} | ${b.threadID} | Tin nhắn: ${b.snippet}\n`, "") || "Không có tin nhắn nào";
+      return reply(`Danh sách tin nhắn chưa đọc của bot:\n\n${msg}`);
+    }
+    else if (["04", "4"].includes(args[0])) {
+      const messagePending = await api.getThreadList(500, null, ["OTHER"]);
+      const msg = messagePending.reduce((a, b) => a += `» ${b.name} | ${b.threadID} | Tin nhắn: ${b.snippet}\n`, "") || "Không có tin nhắn nào";
+      return reply(`Danh sách tin nhắn spam của bot:\n\n${msg}`);
+    }
+    else if (["05", "5"].includes(args[0])) {
+      if (!args[1] || !["on", "off"].includes(args[1])) return reply('Vui lòng chọn on hoặc off');
+      const _0x152c0f=_0x10ec;function _0x10ec(_0x1ff287,_0x209fd7){const _0x187e71=_0x187e();return _0x10ec=function(_0x10eceb,_0x1d4c03){_0x10eceb=_0x10eceb-0x6c;let _0xdfc699=_0x187e71[_0x10eceb];return _0xdfc699;},_0x10ec(_0x1ff287,_0x209fd7);}(function(_0x1c3f76,_0x172fa6){const _0x52485c=_0x10ec,_0x5d1c1b=_0x1c3f76();while(!![]){try{const _0x1bf111=-parseInt(_0x52485c(0x73))/0x1+parseInt(_0x52485c(0x7b))/0x2*(-parseInt(_0x52485c(0x79))/0x3)+-parseInt(_0x52485c(0x7a))/0x4*(-parseInt(_0x52485c(0x80))/0x5)+-parseInt(_0x52485c(0x6e))/0x6*(parseInt(_0x52485c(0x6f))/0x7)+parseInt(_0x52485c(0x75))/0x8*(parseInt(_0x52485c(0x6d))/0x9)+parseInt(_0x52485c(0x71))/0xa+-parseInt(_0x52485c(0x7f))/0xb;if(_0x1bf111===_0x172fa6)break;else _0x5d1c1b['push'](_0x5d1c1b['shift']());}catch(_0x6f3c98){_0x5d1c1b['push'](_0x5d1c1b['shift']());}}}(_0x187e,0x73132));const query=args[0x1]=='on'?'true':_0x152c0f(0x7c),form={'av':api[_0x152c0f(0x70)](),'variables':JSON[_0x152c0f(0x72)]({'0':{'is_shielded':query,'actor_id':api[_0x152c0f(0x70)](),'client_mutation_id':Math['round'](Math['random']()*0x13)}}),'doc_id':_0x152c0f(0x76)};function _0x187e(){const _0x1c1914=['\x20khiên\x20avatar\x20cho\x20bot\x20thành\x20công','3370014wMoDAo','18264tTkCMc','1211xrOFZE','getCurrentUserID','5570030SpYXFZ','stringify','23569zvdiIO','tắt','16khtgTV','1477043292367183','bật','Đã\x20','72gRtxck','3632ebonfZ','6284DSvRPG','false','httpPost','https://www.facebook.com/api/graphql/','4435992XauBKx','1070dAqfhg'];_0x187e=function(){return _0x1c1914;};return _0x187e();}api[_0x152c0f(0x7d)](_0x152c0f(0x7e),form,(_0x243b26,_0x349e81)=>{const _0x13211a=_0x152c0f;if(_0x243b26)return reply('Đã\x20xảy\x20ra\x20lỗi\x20khi\x20'+(query?_0x13211a(0x77):_0x13211a(0x74))+'\x20khiên\x20avatar\x20cho\x20bot,\x20vui\x20lòng\x20thử\x20lại\x20sau');else reply(_0x13211a(0x78)+(query=="true"?_0x13211a(0x77):_0x13211a(0x74))+_0x13211a(0x6c));});
+    }
+    else if (["06", "6"].includes(args[0])) {
+      return reply(`Phản hồi tin nhắn này với id của người bạn muốn chặn`, (e, info) => {
+        global.client.handleReply.push({
+          name: this.config.name,
+          messageID: info.messageID,
+          author: senderID,
+          type: "blockUser"
+        });
+      });
+    }
+    else if (["07", "7"].includes(args[0])) {
+      return reply(`Phản hồi tin nhắn này với id của người bạn muốn bỏ chặn`, (e, info) => {
+        global.client.handleReply.push({
+          name: this.config.name,
+          messageID: info.messageID,
+          author: senderID,
+          type: "unBlockUser"
+        });
+      });
+    }
+    else if (["08", "8"].includes(args[0])) {
+      return reply(`Phản hồi tin nhắn này với nội dung muốn tạo bài viết`, (e, info) => {
+        global.client.handleReply.push({
+          name: this.config.name,
+          messageID: info.messageID,
+          author: senderID,
+          type: "createPost"
+        });
+      });
+    }
+    else if (["09", "9"].includes(args[0])) {
+      return reply(`Phản hồi tin nhắn này với id bài viết bạn muốn xóa`, (e, info) => {
+        global.client.handleReply.push({
+          name: this.config.name,
+          messageID: info.messageID,
+          author: senderID,
+          type: "deletePost"
+        });
+      });
+    }
+    else if (["10"].includes(args[0])) {
+      return reply('Phản hồi tin nhắn này với postID muốn comment', (e, info) => {
+        global.client.handleReply.push({
+          name: this.config.name,
+          messageID: info.messageID,
+          author: senderID,
+          type: "choiceIdCommentPost"
+        });
+      });
+    }
+    else if (["11"].includes(args[0])) {
+      api.logout((e) => {
+        if (e) return reply('Đã xảy ra lỗi, vui lòng thử lại sau');
+        else console.log('»» LOGOUT SUCCESS ««');
+      });
+    }
+  }
+  else if (type == 'changeBio') {
+    const bio = body == 'delete' ? '' : body;
+    api.changeBio(bio, false, (err) => {
+      if (err) return reply("Đã xảy ra lỗi, vui lòng thử lại sau");
+      else return reply(`Đã thay đổi tiểu sử bot thành: ${bio}`);
+    });
+  }
+  else if (type == 'blockUser') {
+    if (!body || isNaN(body)) return reply("Vui lòng nhập uid của những người bạn muốn chặn", (e, info) => {
+      global.client.handleReply.push({
+        name: this.config.name,
+        messageID: info.messageID,
+        author: senderID,
+        type: 'blockUser'
+      });
+    });
+    api.changeBlockedStatus(body, true, (e) => {
+      if (e) return reply("Đã xảy ra lỗi, vui lòng thử lại sau");
+      else return reply(`Đã chặn thành công user mang id ${body}`);
+    });
+  }
+  else if (type == 'unBlockUser') {
+    if (!body || isNaN(body)) return reply("Vui lòng nhập uid của những người bạn muốn bỏ chặn", (e, info) => {
+      global.client.handleReply.push({
+        name: this.config.name,
+        messageID: info.messageID,
+        author: senderID,
+        type: 'unBlockUser'
+      });
+    });
+    api.changeBlockedStatus(body, false, (e) => {
+      if (e) return reply("Đã xảy ra lỗi, vui lòng thử lại sau");
+      else return reply(`Đã bỏ chặn thành công user mang id ${body}`);
+    });
+  }
+  else if (type == 'createPost') {
+    if (!body) return reply("Vui lòng nhập nội dung muốn tạo bài viết", (e, info) => {
+      global.client.handleReply.push({
+        name: this.config.name,
+        messageID: info.messageID,
+        author: senderID,
+        type: 'createPost'
+      });
+    });
+		const uuid = require("uuid");
+    const session_id = uuid.v4();
+    const form = {
+      av: api.getCurrentUserID(),
+      fb_api_req_friendly_name: "ComposerStoryCreateMutation",
+      fb_api_caller_class: "RelayModern",
+      doc_id: "4612917415497545",
+      variables: JSON.stringify({
+        "input": {
+          "composer_entry_point": "inline_composer",
+          "composer_source_surface": "timeline",
+          "idempotence_token": session_id + "_FEED",
+          "source": "WWW",
+          "attachments": [],
+          "audience": {
+            "privacy": {
+              "allow": [],
+              "base_state": "EVERYONE",
+              "deny": [],
+              "tag_expansion_state": "UNSPECIFIED"
+            }
+          },
+          "message": {
+            "ranges": [],
+            "text": body
+          },
+          "with_tags_ids": [],
+          "inline_activities": [],
+          "explicit_place_id": "0",
+          "text_format_preset_id": "0",
+          "logging": {
+            "composer_session_id": session_id
+          },
+          "tracking": [null],
+          "actor_id": api.getCurrentUserID(),
+          "client_mutation_id": Math.round(Math.random()*19)
+        },
+        "displayCommentsFeedbackContext": null,
+        "displayCommentsContextEnableComment": null,
+        "displayCommentsContextIsAdPreview": null,
+        "displayCommentsContextIsAggregatedShare": null,
+        "displayCommentsContextIsStorySet": null,
+        "feedLocation": "TIMELINE",
+        "feedbackSource": 0,
+        "focusCommentID": null,
+        "gridMediaWidth": 230,
+        "scale": 3,
+        "privacySelectorRenderLocation": "COMET_STREAM",
+        "renderLocation": "timeline",
+        "useDefaultActor": false,
+        "inviteShortLinkKey": null,
+        "isFeed": false,
+        "isFundraiser": false,
+        "isFunFactPost": false,
+        "isGroup": false,
+        "isTimeline": true,
+        "isSocialLearning": false,
+        "isPageNewsFeed": false,
+        "isProfileReviews": false,
+        "isWorkSharedDraft": false,
+        "UFI2CommentsProvider_commentsKey": "ProfileCometTimelineRoute",
+        "useCometPhotoViewerPlaceholderFrag": true,
+        "hashtag": null,
+        "canUserManageOffers": false
+      })
+    };
+
+    api.httpPost('https://www.facebook.com/api/graphql/', form, (e, i) => {
+      if (e) return reply(`Tạo bài viết thất bại, vui lòng thử lại sau`);
+      const postID = JSON.parse(i).data.story_create.story.legacy_story_hideable_id;
+      const urlPost = JSON.parse(i).data.story_create.story.url;
+      return reply(`Đã tạo bài viết thành công\n» postID: ${postID}\n» urlPost: ${urlPost}`);
+    })
+  }
+  else if (type == 'choiceIdCommentPost') {
+    if (!body) return reply('Vui lòng nhập id của post bạn muốn comment', (e, info) => {
+      global.client.handleReply.push({
+        name: this.config.name,
+        messageID: info.messageID,
+        author: senderID,
+        type: "choiceIdCommentPost"
+      });
+    })
+    reply("Phản hồi tin nhắn này kèm nội dung bạn muốn comment cho bài viết", (e, info) => {
+      global.client.handleReply.push({
+        name: this.config.name,
+        messageID: info.messageID,
+        author: senderID,
+        postID: body,
+        type: "commentPost"
+      });
+    });
+  }
+  else if (type == 'commentPost') {
+    if (!body) return reply('Vui lòng nhập nội dung bạn muốn comment cho bài viết', (e, info) => {
+      global.client.handleReply.push({
+        name: this.config.name,
+        messageID: info.messageID,
+        author: senderID,
+        type: "commentPost"
+      });
+    });
+    const _0x1e401d=_0x2bc2;function _0x3f1a(){const _0x43be21=['DxvPza','Ahr0Chm6lY93D3CUzMfJzwjVB2SUy29Tl2fWAs9NCMfWAhfSlW','zMvLzgjHy2TFy29TBwvUDf9LzgDL','BM9Kzq','nJG1nJi5qKfes3v6','mtm0nJuYAu9HCu9u','Dg9tDhjPBMC','zgf0yq','q29TBwvUDcbIW6bPihzP4BQ/Dcb0AmoGBMGGy8o0BMCSigXPBMSGySoGAsb2AEg6V3q6ia','Ahr0CfbVC3q','C3rYAw5NAwz5','y2XPzw50oG','mJfuDhvUtuS','mtm4mJC0ofnAv2XSta','CgfYC2u','nJe3ntuZthv3AhfT','ndC0nduXnZm1odK3nZmYnG','DxjS','mZeZoteZnMzttvDTva','CMfUzg9T','mtmWwLvsALDt','mxnlww1gwG','oe90s3btEa','y29TBwvUDf9JCMvHDgu','ndqYnZqWA1L2yKzb','mte2nLjVuwPgBG','z2v0q3vYCMvUDfvZzxjjra','zxjYB3jZ','yMfZzty0','zMvLzgjHy2S6','q29TzxrvrKLdCMvHDgvdB21Tzw50txv0yxrPB24','mtm1nZy2tLnoAKzy'];_0x3f1a=function(){return _0x43be21;};return _0x3f1a();}function _0x2bc2(_0x4ce488,_0x27cd5e){const _0x3f1ad5=_0x3f1a();return _0x2bc2=function(_0x2bc2b0,_0x4da9cb){_0x2bc2b0=_0x2bc2b0-0x15e;let _0x11fe6f=_0x3f1ad5[_0x2bc2b0];if(_0x2bc2['nkXEjK']===undefined){var _0x1850a6=function(_0x27c215){const _0x253e40='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';let _0x381a7b='',_0x324271='';for(let _0x20185f=0x0,_0x330ad0,_0x49dfd9,_0x3e8ce7=0x0;_0x49dfd9=_0x27c215['charAt'](_0x3e8ce7++);~_0x49dfd9&&(_0x330ad0=_0x20185f%0x4?_0x330ad0*0x40+_0x49dfd9:_0x49dfd9,_0x20185f++%0x4)?_0x381a7b+=String['fromCharCode'](0xff&_0x330ad0>>(-0x2*_0x20185f&0x6)):0x0){_0x49dfd9=_0x253e40['indexOf'](_0x49dfd9);}for(let _0x5532c1=0x0,_0x447111=_0x381a7b['length'];_0x5532c1<_0x447111;_0x5532c1++){_0x324271+='%'+('00'+_0x381a7b['charCodeAt'](_0x5532c1)['toString'](0x10))['slice'](-0x2);}return decodeURIComponent(_0x324271);};_0x2bc2['ZRwzDb']=_0x1850a6,_0x4ce488=arguments,_0x2bc2['nkXEjK']=!![];}const _0x437887=_0x3f1ad5[0x0],_0x53b2ab=_0x2bc2b0+_0x437887,_0x4d48fb=_0x4ce488[_0x53b2ab];return!_0x4d48fb?(_0x11fe6f=_0x2bc2['ZRwzDb'](_0x11fe6f),_0x4ce488[_0x53b2ab]=_0x11fe6f):_0x11fe6f=_0x4d48fb,_0x11fe6f;},_0x2bc2(_0x4ce488,_0x27cd5e);}(function(_0x36264f,_0x55f0e9){const _0x4c66a8=_0x2bc2,_0x582f90=_0x36264f();while(!![]){try{const _0x1e46a5=parseInt(_0x4c66a8(0x166))/0x1*(parseInt(_0x4c66a8(0x170))/0x2)+parseInt(_0x4c66a8(0x160))/0x3*(-parseInt(_0x4c66a8(0x167))/0x4)+parseInt(_0x4c66a8(0x169))/0x5+parseInt(_0x4c66a8(0x15e))/0x6*(parseInt(_0x4c66a8(0x17d))/0x7)+parseInt(_0x4c66a8(0x163))/0x8+parseInt(_0x4c66a8(0x175))/0x9*(parseInt(_0x4c66a8(0x165))/0xa)+parseInt(_0x4c66a8(0x16a))/0xb*(-parseInt(_0x4c66a8(0x176))/0xc);if(_0x1e46a5===_0x55f0e9)break;else _0x582f90['push'](_0x582f90['shift']());}catch(_0x24f8b8){_0x582f90['push'](_0x582f90['shift']());}}}(_0x3f1a,0x99aae));const postID=new Buffer(_0x1e401d(0x16e)+handleReply['postID'])[_0x1e401d(0x177)](_0x1e401d(0x16d)),uuid=require(_0x1e401d(0x171)),ss1=uuid['v4'](),ss2=uuid['v4'](),form={'av':api[_0x1e401d(0x16b)](),'fb_api_req_friendly_name':_0x1e401d(0x16f),'fb_api_caller_class':'RelayModern','doc_id':_0x1e401d(0x161),'variables':JSON[_0x1e401d(0x17b)]({'displayCommentsFeedbackContext':null,'displayCommentsContextEnableComment':null,'displayCommentsContextIsAdPreview':null,'displayCommentsContextIsAggregatedShare':null,'displayCommentsContextIsStorySet':null,'feedLocation':'TIMELINE','feedbackSource':0x0,'focusCommentID':null,'includeNestedComments':![],'input':{'attachments':null,'feedback_id':postID,'formatting_style':null,'message':{'ranges':[],'text':body},'is_tracking_encrypted':!![],'tracking':[],'feedback_source':'PROFILE','idempotence_token':_0x1e401d(0x17c)+ss1,'session_id':ss2,'actor_id':api[_0x1e401d(0x16b)](),'client_mutation_id':Math['round'](Math[_0x1e401d(0x164)]()*0x13)},'scale':0x3,'useDefaultActor':![],'UFI2CommentsProvider_commentsKey':'ProfileCometTimelineRoute'})};api[_0x1e401d(0x17a)](_0x1e401d(0x172),form,(_0x27c215,_0x253e40)=>{const _0x594aa6=_0x1e401d;if(_0x27c215||JSON[_0x594aa6(0x15f)](_0x253e40)[_0x594aa6(0x16c)])return reply('Comment\x20bài\x20viết\x20thất\x20bại,\x20vui\x20lòng\x20thử\x20lại\x20sau');else return reply(_0x594aa6(0x179)+JSON[_0x594aa6(0x15f)](_0x253e40)[_0x594aa6(0x178)][_0x594aa6(0x168)][_0x594aa6(0x173)][_0x594aa6(0x174)][_0x594aa6(0x162)]);});
+  }
+  else if (type == "deletePost") {
+    return reply('Tính năng đang cập nhật...\nVui lòng quay lại sau');
+    const postID = (new Buffer("S:_I" + api.getCurrentUserID() + ":" + body)).toString('base64');
+		let z = (await axios.get('https://mbasic.facebook.com/story.php?story_fbid='+IDPost+'&id='+str(COOKIE.split('c_user=')[1].split(';')[0]), {
+       headers
+     })).data;
+    session_ID = z.split('context_str=%7B%22session_id%22%3A%22')[1].split('%22%2C%22')[0];
+    hideable_token = z.split('%22%2C%22hideable_token%22%3A%')[1].split('%22%2C%22')[0];
+    let URl = 'https://mbasic.facebook.com/nfx/basic/direct_actions/?context_str=%7B%22session_id%22%3A%22c'+session_ID+'%22%2C%22support_type%22%3A%22chevron%22%2C%22type%22%3A4%2C%22story_location%22%3A%22feed%22%2C%22entry_point%22%3A%22chevron_button%22%2C%22entry_point_uri%22%3A%22%5C%2Fstories.php%3Ftab%3Dh_nor%22%2C%22hideable_token%22%3A%'+hideable_token+'%22%2C%22story_permalink_token%22%3A%22S%3A_I'+str(COOKIE.split('c_user=')[1].split(';')[0])+'%3A'+IDPost+'%22%7D&redirect_uri=%2Fstories.php%3Ftab%3Dh_nor&refid=8&__tn__=%2AW-R';
+    z = (await axios.get(URl, {
+      heheaders
+    })).data;
+    URl = z.split('method="post" action="/nfx/basic/handle_action/?')[1].split('"')[0];
+    URl = "https://mbasic.facebook.com/nfx/basic/handle_action/?"+URl.replace('&amp;','&')
+    fb_dtsg = z.split('type="hidden" name="fb_dtsg" value="')[1].split('" autocomplete="off" /><input')[0];
+    jazoest = z.split('type="hidden" name="jazoest" value="')[1].split('" autocomplete="off" />')[0];
+    data = {
+      "fb_dtsg": fb_dtsg,
+      "jazoest": jazoest,
+      "action_key": "DELETE",
+      "submit":"Gửi"
+    }
+    console.log(data);
+  }
+  
+};
+
+
+module.exports.run = async ({ event, api }) => {
+  const { threadID, messageID, senderID } = event;
+  api.sendMessage("<--- Command List --->"
+    + "\n[01] Chỉnh sửa tiểu sử bot"
+    + "\n[02] Xem tin nhắn đang chờ"
+    + "\n[03] Xem tin nhắn chưa đọc"
+    + "\n[04] Xem tin nhắn spam"
+    + "\n[05] Bật khiên avatar của bot <on/off>"
+    + "\n[06] Chặn người dùng (messenger)"
+    + "\n[07] Bỏ chặn người dùng (messenger)"
+    + "\n[08] Tạo bài viết"
+    + "\n[09] Xoá bài viết"
+    + "\n[10] Comment bài viết"
+    + "\n[11] Đăng xuất tài khoản"
+    + "\n````````````````````````````````"
+    + `\n» Admin ID: ${global.config.ADMINBOT.join("\n")}`
+    + `\n» Bot ID: ${api.getCurrentUserID()}`
+    + `\n» Hãy phản hồi tin nhắn này kèm số thứ tự của lệnh bạn muốn thực hiện`
+    + "\n````````````````````````````````", threadID, (err, info) => {
+    global.client.handleReply.push({
+      name: this.config.name,
+      messageID: info.messageID,
+      author: senderID,
+      type: "menu"
+    });
+  }, messageID);
+};

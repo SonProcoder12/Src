@@ -1,0 +1,41 @@
+{
+  "name": null,
+  "ID": "100027093399893",
+  "pet": [
+    {
+      "name": "Cacturne",
+      "type": "Grass",
+      "HP": "105.0",
+      "Attack": "172.5",
+      "Defense": "90.0",
+      "Speed": "82.5",
+      "skill": [
+        "Sand Veil",
+        "Water Absorb"
+      ],
+      "coins": 20000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/332.png"
+    },
+    {
+      "name": "Stufful",
+      "type": "Normal",
+      "HP": "70.0",
+      "Attack": "75.0",
+      "Defense": "50.0",
+      "Speed": "50.0",
+      "skill": [
+        "Fluffy",
+        "Klutz",
+        "Cute Charm"
+      ],
+      "coins": 10000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/759.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 0,
+    "lose": 0,
+    "draw": 0
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "name": "Đinh Bảo Minh",
+  "ID": "100031254258889",
+  "pet": [
+    {
+      "name": "Altaria",
+      "type": "Dragon",
+      "HP": 99.75,
+      "Attack": 93.1,
+      "Defense": 119.7,
+      "Speed": 106.4,
+      "coins": 35910,
+      "skill": [
+        "Natural Cure",
+        "Cloud Nine"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/334.png"
+    },
+    {
+      "name": "Gyarados",
+      "type": "Water",
+      "HP": "38.01.9",
+      "Attack": "50.02.5",
+      "Defense": "31.61.58",
+      "Speed": "32.41.62",
+      "skill": [
+        "Intimidate",
+        "Moxie"
+      ],
+      "coins": 0,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/130.png"
+    },
+    {
+      "name": "Slowking",
+      "type": "Water",
+      "HP": "47.52.375",
+      "Attack": "37.51.875",
+      "Defense": "40.02",
+      "Speed": "15.00.75",
+      "skill": [
+        "Oblivious",
+        "Own Tempo",
+        "Regenerator"
+      ],
+      "coins": 5250,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/199.png"
+    },
+    {
+      "name": "Tapu Fini",
+      "type": "Water",
+      "HP": 70,
+      "Attack": 75,
+      "Defense": 115,
+      "Speed": 85,
+      "coins": 34500,
+      "skill": [
+        "Misty Surge",
+        "Telepathy"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/788.png"
+    },
+    {
+      "name": "Gothita",
+      "type": "Psychic",
+      "HP": "67.53.375",
+      "Attack": "45.02.25",
+      "Defense": "75.03.75",
+      "Speed": "67.53.375",
+      "skill": [
+        "Frisk",
+        "Competitive",
+        "Shadow Tag"
+      ],
+      "coins": 21000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/574.png"
+    },
+    {
+      "name": "Cottonee",
+      "type": "Grass",
+      "HP": "40.0",
+      "Attack": "27.0",
+      "Defense": "60.0",
+      "Speed": "66.0",
+      "skill": [
+        "Prankster",
+        "Infiltrator",
+        "Chlorophyll"
+      ],
+      "coins": 10000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/546.png"
+    },
+    {
+      "name": "Bulbasaur",
+      "type": "Grass",
+      "HP": "67.5",
+      "Attack": "73.5",
+      "Defense": "73.5",
+      "Speed": "67.5",
+      "skill": [
+        "Overgrow",
+        "Chlorophyll"
+      ],
+      "coins": 20000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/001.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 3,
+    "lose": 1,
+    "draw": 1
+  }
+}

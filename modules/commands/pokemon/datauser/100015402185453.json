@@ -1,0 +1,80 @@
+{
+  "name": "️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️️",
+  "ID": "100015402185453",
+  "pet": [
+    {
+      "name": "Samurott",
+      "type": "Water",
+      "HP": "142.5",
+      "Attack": "150.0",
+      "Defense": "127.5",
+      "Speed": "105.0",
+      "skill": [
+        "Torrent",
+        "Shell Armor"
+      ],
+      "coins": 20000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/503.png"
+    },
+    {
+      "name": "Deoxys",
+      "type": "Psychic",
+      "HP": 47.5,
+      "Attack": 142.5,
+      "Defense": 47.5,
+      "Speed": 142.5,
+      "skill": [
+        "Pressure"
+      ],
+      "coins": 9500,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/386.png"
+    },
+    {
+      "name": "Buzzwole",
+      "type": "Bug",
+      "HP": 117.9675,
+      "Attack": 153.2475,
+      "Defense": 153.2475,
+      "Speed": 87.0975,
+      "coins": 51156,
+      "skill": [
+        "Beast Boost"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/794.png"
+    },
+    {
+      "name": "Arceus",
+      "type": "Normal",
+      "HP": "114.0",
+      "Attack": 114,
+      "Defense": 114,
+      "Speed": 114,
+      "coins": 45600,
+      "skill": [
+        "Multitype"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/493.png"
+    },
+    {
+      "name": "Rhyperior",
+      "type": "Ground",
+      "HP": 115,
+      "Attack": 140,
+      "Defense": 130,
+      "Speed": 40,
+      "coins": 42500,
+      "skill": [
+        "Lightning Rod",
+        "Solid Rock",
+        "Reckless"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/464.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 4,
+    "lose": 5,
+    "draw": 3
+  }
+}

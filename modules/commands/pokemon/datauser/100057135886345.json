@@ -1,0 +1,75 @@
+{
+  "name": "Hân Âu",
+  "ID": "100057135886345",
+  "pet": [
+    {
+      "name": "Wobbuffet",
+      "type": "Psychic",
+      "HP": "95.0",
+      "Attack": "16.5",
+      "Defense": "29.0",
+      "Speed": "16.5",
+      "skill": [
+        "Shadow Tag",
+        "Telepathy"
+      ],
+      "coins": 5000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/202.png"
+    },
+    {
+      "name": "Nincada",
+      "type": "Bug",
+      "HP": "12.4",
+      "Attack": "18.0",
+      "Defense": "36.0",
+      "Speed": "16.0",
+      "skill": [
+        "Compound Eyes",
+        "Run Away"
+      ],
+      "coins": 0,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/290.png"
+    },
+    {
+      "name": "Groudon",
+      "type": "Ground",
+      "HP": "154.3",
+      "Attack": "231.5",
+      "Defense": "216.1",
+      "Speed": "138.9",
+      "coins": "63504.0",
+      "skill": [
+        "Drought"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/383.png"
+    },
+    {
+      "name": "Kartana",
+      "type": "Grass",
+      "HP": "86.7",
+      "Attack": "266.1",
+      "Defense": "192.6",
+      "Speed": "160.2",
+      "coins": "60480.0",
+      "skill": [
+        "Beast Boost"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/798.png"
+    }
+  ],
+  "foods": [
+    {
+      "name": "Stone Soup a la Cube",
+      "type": "Ground",
+      "HP": 16,
+      "Attack": 16,
+      "Defense": 16,
+      "Speed": 16
+    }
+  ],
+  "solo": {
+    "win": 7,
+    "lose": 2,
+    "draw": 6
+  }
+}

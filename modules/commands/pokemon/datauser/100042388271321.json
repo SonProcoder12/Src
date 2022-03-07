@@ -1,0 +1,84 @@
+{
+  "name": "Nguyễn Hưng",
+  "ID": "100042388271321",
+  "pet": [
+    {
+      "name": "Rapidash",
+      "type": "Fire",
+      "HP": "97.5",
+      "Attack": "150.0",
+      "Defense": "105.0",
+      "Speed": "157.5",
+      "skill": [
+        "Run Away",
+        "Flash Fire",
+        "Flame Body"
+      ],
+      "coins": 20000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/078.png"
+    },
+    {
+      "name": "Keldeo",
+      "type": "Water",
+      "HP": "91.0",
+      "Attack": "72.0",
+      "Defense": "90.0",
+      "Speed": "108.0",
+      "skill": [
+        "Justified"
+      ],
+      "coins": 10000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/647.png"
+    },
+    {
+      "name": "Samurott",
+      "type": "Water",
+      "HP": "142.5",
+      "Attack": "150.0",
+      "Defense": "127.5",
+      "Speed": "105.0",
+      "skill": [
+        "Torrent",
+        "Shell Armor"
+      ],
+      "coins": 20000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/503.png"
+    },
+    {
+      "name": "Quagsire",
+      "type": "Water",
+      "HP": "38.0",
+      "Attack": "34.0",
+      "Defense": "34.0",
+      "Speed": "14.0",
+      "skill": [
+        "Damp",
+        "Water Absorb",
+        "Unaware"
+      ],
+      "coins": 0,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/195.png"
+    },
+    {
+      "name": "Gothorita",
+      "type": "Psychic",
+      "HP": "60.0",
+      "Attack": "45.0",
+      "Defense": "70.0",
+      "Speed": "55.0",
+      "skill": [
+        "Frisk",
+        "Competitive",
+        "Shadow Tag"
+      ],
+      "coins": 10000,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/575.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 0,
+    "lose": 0,
+    "draw": 0
+  }
+}

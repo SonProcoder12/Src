@@ -1,0 +1,26 @@
+{
+  "name": "Vương Đức Duy",
+  "ID": "100040801755901",
+  "pet": [
+    {
+      "name": "Cranidos",
+      "type": "Rock",
+      "HP": "25.5",
+      "Attack": 47.5,
+      "Defense": 15.2,
+      "Speed": 22.04,
+      "skill": [
+        "Mold Breaker",
+        "Sheer Force"
+      ],
+      "coins": 0,
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/408.png"
+    }
+  ],
+  "foods": [],
+  "solo": {
+    "win": 0,
+    "lose": 1,
+    "draw": 0
+  }
+}

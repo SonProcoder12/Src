@@ -1,0 +1,48 @@
+{
+  "name": "Phạm Ninh",
+  "ID": "100049677040720",
+  "pet": [
+    {
+      "name": "Zekrom",
+      "type": "Dragon",
+      "HP": "139.7",
+      "Attack": "209.5",
+      "Defense": "167.6",
+      "Speed": "125.7",
+      "coins": "55062.0",
+      "skill": [
+        "Teravolt"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/644.png"
+    },
+    {
+      "name": "Charizard",
+      "type": "Fire",
+      "HP": "103.7",
+      "Attack": "111.7",
+      "Defense": "103.7",
+      "Speed": "133.0",
+      "coins": "38760.0",
+      "skill": [
+        "Blaze",
+        "Solar Power"
+      ],
+      "images": "https://raw.githubusercontent.com/Purukitto/pokemon-data.json/master/images/pokedex/hires/006.png"
+    }
+  ],
+  "foods": [
+    {
+      "name": "Hot Pot a la Cube",
+      "type": "Fire",
+      "HP": 20,
+      "Attack": 20,
+      "Defense": 20,
+      "Speed": 20
+    }
+  ],
+  "solo": {
+    "win": 2,
+    "lose": 7,
+    "draw": 8
+  }
+}

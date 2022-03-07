@@ -1,0 +1,24 @@
+{
+    "100005958612879": {
+        "warningLeft": 2,
+        "warningReason": [
+            "spam"
+        ],
+        "banned": false
+    },
+    "100049623731912": {
+        "warningLeft": 2,
+        "warningReason": [
+            "1"
+        ],
+        "banned": false
+    },
+    "100078182297914": {
+        "warningLeft": 1,
+        "warningReason": [
+            "spam",
+            "spam"
+        ],
+        "banned": false
+    }
+}
